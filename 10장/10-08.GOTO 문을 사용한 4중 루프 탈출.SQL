@@ -1,0 +1,23 @@
+SET ECHO ON
+SET TAB OFF
+SET SERVEROUTPUT ON
+
+REM GOTO 문을 사용한 4중 LOOP 탈출
+BEGIN
+  FOR I IN 1 .. 10 LOOP
+    FOR J IN 1 .. 10 LOOP
+      FOR K IN 1 .. 10 LOOP
+        FOR L IN 1 .. 10 LOOP
+          GOTO AFTER_LOOP ; -- 4중 LOOP 탈출
+          DBMS_OUTPUT.PUT_LINE('L='||L) ;
+        END LOOP ;
+        DBMS_OUTPUT.PUT_LINE('K='||K) ;
+      END LOOP ;
+      DBMS_OUTPUT.PUT_LINE('J='||J) ;
+    END LOOP ;
+    DBMS_OUTPUT.PUT_LINE('I='||I) ;
+  END LOOP ;
+  <<AFTER_LOOP>> -- 레이블
+  DBMS_OUTPUT.PUT_LINE('AFTER LOOP') ;
+END ;
+/

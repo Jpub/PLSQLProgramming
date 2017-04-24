@@ -1,0 +1,6 @@
+SET ECHO ON
+SET TAB OFF
+SET SERVEROUTPUT ON
+
+REM SHOW ERROR를 사용하여 저장 프로시저 컴파일 시 발생한 오류 조회
+SHOW ERROR

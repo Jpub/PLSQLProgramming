@@ -1,0 +1,13 @@
+SET ECHO ON
+SET TAB OFF
+SET SERVEROUTPUT ON
+
+REM VARRAY를 사용한 스키마 레벨 데이터 타입 정의
+CREATE OR REPLACE TYPE languages IS VARRAY(10) OF VARCHAR2(64)
+/
+
+PAUSE
+
+REM Nested Table을 사용한 스키마 레벨 데이터 타입 정의
+CREATE OR REPLACE TYPE cities IS TABLE OF VARCHAR2(64)
+/
