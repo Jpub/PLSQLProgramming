@@ -1,0 +1,11 @@
+SET ECHO ON
+SET TAB OFF
+SET SERVEROUTPUT ON
+
+REM 저장 함수 tvl을 사용하여 BOOLEAN 값 출력
+BEGIN
+  DBMS_OUTPUT.PUT_LINE('1=1 : '||tvl(1=1,  'TRUE', 'FALSE')) ;
+  DBMS_OUTPUT.PUT_LINE('1=2 : '||tvl(1=2,  'TRUE', 'FALSE')) ;
+  DBMS_OUTPUT.PUT_LINE('NULL: '||tvl(NULL, 'TRUE', 'FALSE', 'NULL')) ;
+END ;
+/

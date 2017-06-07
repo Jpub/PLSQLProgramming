@@ -1,0 +1,13 @@
+SET ECHO ON
+SET TAB OFF
+SET SERVEROUTPUT ON
+
+REM 저장 서브프로그램
+CREATE OR REPLACE FUNCTION square
+                (a_num NUMBER)
+  RETURN NUMBER
+IS
+BEGIN
+  RETURN a_num * a_num ;
+END ;
+/

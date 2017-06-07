@@ -1,0 +1,6 @@
+SET ECHO ON
+SET TAB OFF
+SET SERVEROUTPUT ON
+
+REM 저장 프로시저 실행: CALL 문 사용
+CALL raise_salary(7788, 100) ;

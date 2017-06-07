@@ -1,0 +1,12 @@
+SET ECHO ON
+SET TAB OFF
+SET SERVEROUTPUT ON
+
+REM 서브타입만 다르고 기본 데이터 타입이 동일한 매개변수로는 중복 정의는 불가능하다
+DECLARE
+  PROCEDURE p(a INTEGER) IS BEGIN NULL ; END ;
+  PROCEDURE p(a REAL)    IS BEGIN NULL ; END ;
+BEGIN
+  P(10) ;
+END ;
+/

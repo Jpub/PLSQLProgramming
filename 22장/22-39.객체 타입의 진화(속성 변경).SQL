@@ -1,0 +1,7 @@
+SET ECHO ON
+SET TAB OFF
+SET SERVEROUTPUT ON
+
+REM 객체 타입의 속성 변경
+ALTER TYPE employee_type
+  MODIFY ATTRIBUTE (phone_number VARCHAR2(12)) CASCADE ;

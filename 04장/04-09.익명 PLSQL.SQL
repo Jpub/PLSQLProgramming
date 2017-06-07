@@ -1,0 +1,12 @@
+SET ECHO ON
+SET TAB OFF
+SET SERVEROUTPUT ON
+
+REM ¿Õ∏Ì(Anonymous) PL/SQL
+DECLARE
+  v_num NUMBER ;
+BEGIN
+  v_num := square(10) ;
+  DBMS_OUTPUT.PUT_LINE(v_num) ;
+END ;
+/

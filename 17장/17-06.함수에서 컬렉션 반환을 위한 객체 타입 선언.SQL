@@ -1,0 +1,7 @@
+SET ECHO ON
+SET TAB OFF
+SET SERVEROUTPUT ON
+
+REM 함수에서 컬렉션 반환을 위한 객체 타입 선언
+CREATE OR REPLACE TYPE empno_arr_type IS TABLE OF NUMBER ;
+/

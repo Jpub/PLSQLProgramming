@@ -1,0 +1,12 @@
+SET ECHO ON
+SET TAB OFF
+SET SERVEROUTPUT ON
+
+REM 범위를 지정한 FOR LOOP 문
+BEGIN
+  FOR idx IN 1 .. 3
+  LOOP
+    DBMS_OUTPUT.PUT_LINE('루프 내부, idx = ' || idx) ;
+  END LOOP ;
+END ;
+/

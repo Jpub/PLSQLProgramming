@@ -1,0 +1,14 @@
+SET ECHO ON
+SET TAB OFF
+SET SERVEROUTPUT ON
+
+REM 패키지 커서 예제
+REM 패키지 본체
+CREATE OR REPLACE PACKAGE BODY pkg_emp
+IS
+  CURSOR c_emp_cur RETURN emp%ROWTYPE IS
+    SELECT *
+      FROM emp
+     ORDER BY ename ;
+END ;  
+/

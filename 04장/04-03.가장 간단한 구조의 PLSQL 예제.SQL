@@ -1,0 +1,10 @@
+SET ECHO ON
+SET TAB OFF
+SET SERVEROUTPUT ON
+
+REM 선언부와 예외처리부가 없는 가장 간단한 구조의 PL/SQL 예제
+BEGIN
+  DBMS_OUTPUT.PUT_LINE('Hello, ') ;
+  DBMS_OUTPUT.PUT_LINE('World!') ;
+END ;
+/

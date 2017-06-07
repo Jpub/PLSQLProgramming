@@ -1,0 +1,11 @@
+SET ECHO ON
+SET TAB OFF
+SET SERVEROUTPUT ON
+
+REM NOT NULL 제약조건을 가지는 변수에 초기값 미지정 시 오류 발생
+DECLARE
+  v_name VARCHAR2(10) NOT NULL ;
+BEGIN
+  DBMS_OUTPUT.PUT_LINE(v_name) ;
+END ;
+/

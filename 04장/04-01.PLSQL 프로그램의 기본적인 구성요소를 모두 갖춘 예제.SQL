@@ -1,0 +1,14 @@
+SET ECHO ON
+SET TAB OFF
+SET SERVEROUTPUT ON
+
+REM PL/SQL 프로그램의 기본적인 구성요소를 모두 갖춘 예제
+DECLARE
+  v_str VARCHAR2(100) ;
+BEGIN
+  v_str := 'Hello, world!' ;
+  DBMS_OUTPUT.PUT_LINE(v_str) ;
+EXCEPTION WHEN OTHERS THEN
+  DBMS_OUTPUT.PUT_LINE(SQLERRM) ;
+END ;
+/
