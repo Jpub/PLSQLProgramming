@@ -1,0 +1,14 @@
+SET ECHO ON
+SET TAB OFF
+SET SERVEROUTPUT ON
+
+REM 宫矫利 目辑 加己
+DECLARE
+  v_rows PLS_INTEGER ;
+BEGIN
+  DELETE FROM emp WHERE empno = 7788 ;
+  v_rows := SQL%ROWCOUNT ; -- 宫矫利 目辑 加己 SQL%ROWCOUNT
+  DBMS_OUTPUT.PUT_LINE('昏力等 扒荐='||v_rows) ;
+  ROLLBACK ;
+END ;
+/

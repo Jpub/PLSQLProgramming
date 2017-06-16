@@ -1,0 +1,14 @@
+SET ECHO ON
+SET TAB OFF
+SET SERVEROUTPUT ON
+
+REM 1°³ Ä®·³ SELECT
+DECLARE
+  v_cnt NUMBER ;
+BEGIN
+  SELECT COUNT(*)
+    INTO v_cnt
+    FROM emp ;
+  DBMS_OUTPUT.PUT_LINE('COUNT(*) = ' || v_cnt) ;
+END ;
+/

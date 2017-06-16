@@ -1,0 +1,11 @@
+SET ECHO ON
+SET TAB OFF
+SET SERVEROUTPUT ON
+
+REM 변수 선언 시에 제약조건과 초기 값을 지정할 수 있다.
+DECLARE
+  v_name VARCHAR2(10) NOT NULL := 'SMITH' ;
+BEGIN
+  DBMS_OUTPUT.PUT_LINE(v_name) ;
+END ;
+/

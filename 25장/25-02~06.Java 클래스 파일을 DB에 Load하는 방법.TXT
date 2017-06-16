@@ -1,0 +1,25 @@
+#########################################
+# Java 클래스 파일을 DB에 Load하는 방법
+#########################################
+
+# 1. 자바 소스코드 컴파일
+javac MyStringUtility.java
+
+# 2. 자바 class를 데이터베이스로 load
+loadjava -user scott/tiger MyStringUtility.class
+
+# 3. SQL*Plus에서 호출 명세 작성
+
+REM 3. 자바 저장 프로그램 호출 명세
+CREATE OR REPLACE FUNCTION reverse_string(string VARCHAR2) RETURN VARCHAR2
+  AS LANGUAGE JAVA
+  NAME 'MyStringUtility.reverseString(java.lang.String) return java.lang.String';
+/
+
+REM 4. 자바 저장 프로그램 실행
+COL 문자열 FORMAT A70
+SELECT reverse_string('PL/SQL 프로그래밍') 문자열 FROM DUAL ;
+
+REM 5. 자바 저장 프로그램 삭제
+DROP FUNCTION reverse_string ;
+DROP JAVA CLASS "MyStringUtility" ;
